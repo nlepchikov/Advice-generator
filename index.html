@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+  </head>
+  <body>
+    <main>
+      <script>
+        async function getAdvice(){
+          try{
+            const response = await fetch(`https://api.adviceslip.com/advice`);
+            if(!response.ok){
+              throw new Error(`HTTP Error! Code:${response.status}`);
+            }
+            const data = await response.json();
+            console.log('Data:', data);
+          }
+          catch(error){
+            console.error('There is an error', error);
+          }
+        }
+
+        getAdvice();
+      </script>
+
+
+      Advice #<!-- Advice ID goes here -->
+  
+      "<!-- Advice text goes here -->"
+
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    </footer>
+  </body>
+</html>
