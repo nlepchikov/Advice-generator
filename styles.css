@@ -19,3 +19,70 @@ main {
   justify-content: center;
   min-height: 100vh;
 }
+
+.advice-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 370px;
+  background-color: var(--color-blue900);
+  border-radius: 10px;
+  padding: 2.3rem;
+  padding-block-end: 3.5rem;
+}
+
+.advice-id{
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  color: var(--color-green);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advice-text {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  color: var(--color-blue200);
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 1.4rem auto;
+}
+
+.img-divider {
+  width: 100%;
+  height: auto;
+}
+
+.button-dice {
+  display: grid;
+  position: absolute;
+  bottom: -1.75rem;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+  background-color: var(--color-green);
+  border-radius: 50%;
+  border: none;
+}
+
+.button-dice:hover{
+  box-shadow: 0px 0px 20px var(--color-green);
+}
+
+.img-dice {
+  width: 1.3rem;
+  height: 1.3rem;
+}

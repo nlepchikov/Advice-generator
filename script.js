@@ -1,5 +1,6 @@
-const adviceId = document.querySelector("#advice-id");
-const adviceText = document.querySelector("#advice-text");
+const adviceId = document.querySelector(".advice-id");
+const adviceText = document.querySelector(".advice-text");
+const refreshButton = document.querySelector(".button-dice");
 
 async function getAdvice() {
   adviceText.textContent = "Loading...";
@@ -18,5 +19,11 @@ async function getAdvice() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  getAdvice();
+});
+
+
+refreshButton.addEventListener("click", () => {
+  adviceId.textContent = "Advice #";
   getAdvice();
 });
